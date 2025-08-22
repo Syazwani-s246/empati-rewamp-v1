@@ -13,7 +13,7 @@ const HeroSection = () => {
           alt="Community support circle" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 warm-gradient opacity-90"></div>
+        <div className="absolute inset-0 hero-gradient opacity-95"></div>
       </div>
 
       {/* Content */}
@@ -32,7 +32,7 @@ const HeroSection = () => {
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
-            <span className="text-gradient">Empathy</span>{" "}
+            <span className="text-hero-gradient">Empathy</span>{" "}
             <span className="text-foreground">in Action</span>
           </h1>
 

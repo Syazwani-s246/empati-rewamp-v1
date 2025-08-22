@@ -9,18 +9,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary-hover transition-gentle",
+        default: "bg-primary text-primary-foreground hover:bg-primary-hover transition-gentle shadow-soft",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-primary bg-background text-primary hover:bg-primary hover:text-primary-foreground transition-gentle",
+          "border-2 border-primary bg-background text-primary hover:bg-primary hover:text-primary-foreground transition-gentle shadow-soft hover:shadow-healing",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary-hover transition-gentle",
+          "bg-secondary text-secondary-foreground hover:bg-secondary-hover transition-gentle shadow-warm",
         ghost: "hover:bg-accent hover:text-accent-foreground transition-gentle",
         link: "text-primary underline-offset-4 hover:underline transition-gentle",
-        hero: "healing-gradient text-primary-foreground font-semibold shadow-warm hover:shadow-healing hover:-translate-y-0.5 transition-gentle",
-        warm: "warm-gradient text-foreground border border-border hover:shadow-card transition-gentle",
-        community: "community-gradient text-primary-foreground hover:opacity-90 transition-gentle"
+        hero: "hero-gradient text-primary-foreground font-semibold shadow-glow hover:shadow-healing hover:-translate-y-1 transition-gentle border-0",
+        warm: "warm-gradient text-secondary-foreground border border-secondary/20 hover:shadow-warm transition-gentle",
+        community: "community-gradient text-primary-foreground hover:opacity-90 transition-gentle shadow-warm hover:shadow-glow"
       },
       size: {
         default: "h-10 px-4 py-2",
