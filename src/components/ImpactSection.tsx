@@ -78,10 +78,10 @@ const ImpactSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">
-            Measuring Our <span className="text-secondary">Collective Impact</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            Measuring Our <span className="text-secondary-foreground">Collective Impact</span>
           </h2>
-          <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
             Every number represents a story of transformation, connection, and hope. 
             These are the tangible results of our empathy family working together.
           </p>
@@ -96,17 +96,17 @@ const ImpactSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-background/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <stat.icon className="h-6 w-6 text-primary-foreground" />
+                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <stat.icon className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary-foreground mb-1">
+                  <div className="text-3xl font-bold text-foreground mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-lg font-semibold text-primary-foreground mb-2">
+                  <div className="text-lg font-semibold text-foreground mb-2">
                     {stat.label}
                   </div>
-                  <p className="text-primary-foreground/70 leading-relaxed">
+                  <p className="text-foreground/70 leading-relaxed">
                     {stat.description}
                   </p>
                 </div>
@@ -117,8 +117,8 @@ const ImpactSection = () => {
 
         {/* Timeline */}
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold text-center mb-12 text-primary-foreground">
-            Our Journey of <span className="text-secondary">Growth & Impact</span>
+          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
+            Our Journey of <span className="text-secondary-foreground">Growth & Impact</span>
           </h3>
           
           <div className="relative">
@@ -141,10 +141,10 @@ const ImpactSection = () => {
                     <div className="text-2xl font-bold text-secondary mb-2">
                       {achievement.year}
                     </div>
-                    <h4 className="text-xl font-semibold text-primary-foreground mb-3">
+                    <h4 className="text-xl font-semibold text-foreground mb-3">
                       {achievement.title}
                     </h4>
-                    <p className="text-primary-foreground/80 leading-relaxed">
+                    <p className="text-foreground/80 leading-relaxed">
                       {achievement.description}
                     </p>
                   </div>
@@ -157,10 +157,10 @@ const ImpactSection = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-20">
           <div className="bg-background/10 backdrop-blur-sm rounded-3xl p-8 border border-background/20 shadow-warm">
-            <h3 className="text-2xl font-bold mb-4 text-primary-foreground">
+            <h3 className="text-2xl font-bold mb-4 text-foreground">
               Be Part of Our Growing Impact
             </h3>
-            <p className="text-lg text-primary-foreground/80 mb-6 max-w-2xl mx-auto">
+            <p className="text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
               Every person who joins our empathy family contributes to these numbers 
               and becomes part of our collective story of healing and transformation.
             </p>

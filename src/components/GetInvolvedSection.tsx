@@ -53,10 +53,10 @@ const GetInvolvedSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">
-            Join Our <span className="text-secondary">Empathy Family</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            Join Our <span className="text-secondary-foreground">Empathy Family</span>
           </h2>
-          <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
             Whether you're seeking support or ready to share your strengths, 
             there are two meaningful pathways to become part of our healing community.
           </p>
@@ -67,13 +67,13 @@ const GetInvolvedSection = () => {
           {/* Community Member Path */}
           <div className="bg-background/10 backdrop-blur-sm rounded-3xl p-8 border border-background/20 shadow-healing">
             <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-background/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="h-8 w-8 text-primary-foreground" />
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-primary-foreground mb-3">
+              <h3 className="text-2xl font-bold text-foreground mb-3">
                 Become a Community Member
               </h3>
-              <p className="text-primary-foreground/80 leading-relaxed">
+              <p className="text-foreground/80 leading-relaxed">
                 Join our empathy family as someone seeking support, healing, and connection. 
                 Every member is valued and has the potential to become a peer supporter.
               </p>
@@ -81,11 +81,11 @@ const GetInvolvedSection = () => {
 
             {/* Member Benefits */}
             <div className="space-y-3 mb-8">
-              <h4 className="font-semibold text-primary-foreground mb-4">What You'll Receive:</h4>
+              <h4 className="font-semibold text-foreground mb-4">What You'll Receive:</h4>
               {memberBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                  <span className="text-primary-foreground/90 leading-relaxed">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/90 leading-relaxed">
                     {benefit}
                   </span>
                 </div>
@@ -102,7 +102,7 @@ const GetInvolvedSection = () => {
                 Apply for Membership
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <p className="text-sm text-primary-foreground/70 text-center">
+              <p className="text-sm text-foreground/70 text-center">
                 No cost • Confidential application • Quick response
               </p>
             </div>
@@ -111,13 +111,13 @@ const GetInvolvedSection = () => {
           {/* Volunteer Path */}
           <div className="bg-background/10 backdrop-blur-sm rounded-3xl p-8 border border-background/20 shadow-healing">
             <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-background/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-primary-foreground" />
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-primary-foreground mb-3">
+              <h3 className="text-2xl font-bold text-foreground mb-3">
                 Become a Volunteer
               </h3>
-              <p className="text-primary-foreground/80 leading-relaxed">
+              <p className="text-foreground/80 leading-relaxed">
                 Share your skills and compassion while growing personally and professionally. 
                 Our volunteers often find as much healing as they provide.
               </p>
@@ -125,11 +125,11 @@ const GetInvolvedSection = () => {
 
             {/* Volunteer Benefits */}
             <div className="space-y-3 mb-8">
-              <h4 className="font-semibold text-primary-foreground mb-4">What You'll Gain:</h4>
+              <h4 className="font-semibold text-foreground mb-4">What You'll Gain:</h4>
               {volunteerBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                  <span className="text-primary-foreground/90 leading-relaxed">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/90 leading-relaxed">
                     {benefit}
                   </span>
                 </div>
@@ -146,7 +146,7 @@ const GetInvolvedSection = () => {
                 Start Volunteering
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <p className="text-sm text-primary-foreground/70 text-center">
+              <p className="text-sm text-foreground/70 text-center">
                 Flexible commitment • Full training provided • Ongoing support
               </p>
             </div>
@@ -155,8 +155,8 @@ const GetInvolvedSection = () => {
 
         {/* Volunteer Roles */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h3 className="text-3xl font-bold text-center mb-12 text-primary-foreground">
-            Volunteer <span className="text-secondary">Opportunities</span>
+          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
+            Volunteer <span className="text-secondary-foreground">Opportunities</span>
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {volunteerRoles.map((role, index) => (
@@ -165,7 +165,7 @@ const GetInvolvedSection = () => {
                 className="bg-background/10 backdrop-blur-sm rounded-xl p-6 border border-background/20"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h4 className="text-xl font-semibold text-primary-foreground mb-3">
+                <h4 className="text-xl font-semibold text-foreground mb-3">
                   {role.title}
                 </h4>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -178,7 +178,7 @@ const GetInvolvedSection = () => {
                     {role.training} training
                   </Badge>
                 </div>
-                <p className="text-primary-foreground/80 leading-relaxed">
+                <p className="text-foreground/80 leading-relaxed">
                   {role.description}
                 </p>
               </div>
@@ -189,10 +189,10 @@ const GetInvolvedSection = () => {
         {/* Bottom CTA */}
         <div className="text-center">
           <div className="bg-background/20 backdrop-blur-sm rounded-2xl p-8 border border-background/30">
-            <h3 className="text-2xl font-bold mb-4 text-primary-foreground">
+            <h3 className="text-2xl font-bold mb-4 text-foreground">
               Ready to Join Our Mission?
             </h3>
-            <p className="text-lg text-primary-foreground/80 mb-6 max-w-2xl mx-auto">
+            <p className="text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
               Every person who joins our empathy family makes our community stronger 
               and our impact more meaningful. Which path calls to you?
             </p>

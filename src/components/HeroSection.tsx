@@ -52,7 +52,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-3 text-lg">
               <div className="p-2 bg-secondary/20 rounded-full">
-                <Users className="h-6 w-6 text-secondary-foreground" />
+                <Users className="h-6 w-6 text-secondary" />
               </div>
               <span className="font-semibold">One Empathy Family</span>
             </div>
