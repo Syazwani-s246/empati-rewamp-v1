@@ -8,33 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* NGO Empati Design System - Healing & Community Colors */
+    --background: 42 67% 95%; /* #F9F3E3 cream base */
+    --foreground: 210 9% 20%; /* #2D3436 charcoal text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 42 67% 97%;
+    --card-foreground: 210 9% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 42 67% 97%;
+    --popover-foreground: 210 9% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Sage Green for trust and healing */
+    --primary: 95 12% 66%; /* #A8B5A0 sage green */
+    --primary-foreground: 42 67% 95%;
+    --primary-hover: 95 15% 60%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Soft Butter Yellow for warmth and hope */
+    --secondary: 48 42% 76%; /* #E8D5A3 soft butter yellow */
+    --secondary-foreground: 210 9% 20%;
+    --secondary-hover: 48 45% 70%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones for gentle contrast */
+    --muted: 42 30% 88%;
+    --muted-foreground: 210 9% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Warmer cream for highlights */
+    --accent: 48 55% 85%;
+    --accent-foreground: 210 9% 20%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 42 67% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 42 20% 85%;
+    --input: 42 20% 90%;
+    --ring: 95 12% 66%;
+
+    /* Custom healing gradients */
+    --gradient-healing: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)), hsl(var(--accent)));
+    --gradient-community: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--secondary)));
+
+    /* Elegant shadows with brand colors */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-warm: 0 8px 30px hsl(var(--secondary) / 0.15);
+    --shadow-card: 0 2px 12px hsl(var(--muted) / 0.3);
+
+    /* Smooth transitions for healing interactions */
+    --transition-gentle: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-warm: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -56,41 +77,45 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with warmer, healing tones */
+    --background: 210 15% 8%;
+    --foreground: 42 67% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 15% 12%;
+    --card-foreground: 42 67% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 15% 12%;
+    --popover-foreground: 42 67% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 95 20% 70%;
+    --primary-foreground: 210 15% 8%;
+    --primary-hover: 95 25% 75%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 48 35% 25%;
+    --secondary-foreground: 42 67% 95%;
+    --secondary-hover: 48 40% 30%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 15% 15%;
+    --muted-foreground: 42 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 95 15% 20%;
+    --accent-foreground: 42 67% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 42 67% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 210 15% 18%;
+    --input: 210 15% 18%;
+    --ring: 95 20% 70%;
+
+    /* Dark mode gradients maintain healing aesthetic */
+    --gradient-healing: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)), hsl(var(--accent)));
+    --gradient-community: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--secondary)));
+
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-warm: 0 8px 30px hsl(var(--primary) / 0.2);
+    --shadow-card: 0 2px 12px hsl(0 0% 0% / 0.4);
   }
 }
 
@@ -100,6 +125,83 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Healing-focused component styles */
+  .healing-gradient {
+    background: var(--gradient-healing);
+  }
+  
+  .warm-gradient {
+    background: var(--gradient-warm);
+  }
+  
+  .community-gradient {
+    background: var(--gradient-community);
+  }
+
+  .shadow-healing {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .transition-gentle {
+    transition: var(--transition-gentle);
+  }
+
+  .transition-warm {
+    transition: var(--transition-warm);
+  }
+
+  /* Typography for empathy and healing */
+  .text-gradient {
+    background: var(--gradient-healing);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hover-lift {
+    @apply transition-warm hover:-translate-y-1 hover:shadow-warm;
+  }
+
+  .masonry-grid {
+    column-count: 3;
+    column-gap: 1.5rem;
+    break-inside: avoid;
+  }
+
+  @media (max-width: 768px) {
+    .masonry-grid {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .masonry-grid {
+      column-count: 1;
+    }
+  }
+
+  .masonry-item {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    break-inside: avoid;
   }
 }
