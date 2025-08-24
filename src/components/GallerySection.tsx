@@ -78,16 +78,16 @@ const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="py-20 bg-background">
+    <section id="gallery" className="py-20 bg-gradient-to-br from-background to-primary/5">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Our Journey</span> in Pictures
+            <span className="text-gradient">Moments</span> of Impact
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Moments of connection, healing, and transformation from our empathy family's 
-            journey together in building stronger mental health support.
+            Capturing the beautiful journey of healing, connection, and transformation 
+            within our empathy family community.
           </p>
         </div>
 
@@ -109,116 +109,140 @@ const GallerySection = () => {
           ))}
         </div>
 
-        {/* Main Carousel */}
+        {/* Main Featured Carousel */}
         <div className="relative mb-16">
-          <div className="aspect-[16/9] max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-warm">
-            <img 
-              src={filteredItems[currentIndex]?.src} 
-              alt={filteredItems[currentIndex]?.alt}
-              className="w-full h-full object-cover"
-            />
-            
-            {/* Overlay with content */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-6">
-              <div className="max-w-2xl">
-                <div className="flex items-center gap-2 mb-2">
-                  {filteredItems[currentIndex]?.category === "Community Events" && <Calendar className="h-4 w-4 text-primary" />}
-                  {filteredItems[currentIndex]?.category === "Support Groups" && <Users className="h-4 w-4 text-primary" />}
-                  {filteredItems[currentIndex]?.category === "Community" && <Heart className="h-4 w-4 text-primary" />}
-                  <span className="text-sm text-primary font-medium">
-                    {filteredItems[currentIndex]?.category}
-                  </span>
+          <div className="aspect-[21/9] max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-healing border border-border/20 bg-gradient-to-br from-card to-card/50">
+            <div className="relative h-full">
+              <img 
+                src={filteredItems[currentIndex]?.src} 
+                alt={filteredItems[currentIndex]?.alt}
+                className="w-full h-full object-cover"
+              />
+              
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-transparent to-transparent"></div>
+              
+              {/* Content overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="max-w-4xl mx-auto">
+                  <div className="flex items-center gap-3 mb-4">
+                    {filteredItems[currentIndex]?.category === "Community Events" && <Calendar className="h-5 w-5 text-primary" />}
+                    {filteredItems[currentIndex]?.category === "Support Groups" && <Users className="h-5 w-5 text-primary" />}
+                    {filteredItems[currentIndex]?.category === "Community" && <Heart className="h-5 w-5 text-primary" />}
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20">
+                      {filteredItems[currentIndex]?.category}
+                    </span>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+                    {filteredItems[currentIndex]?.title}
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+                    {filteredItems[currentIndex]?.description}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">
-                  {filteredItems[currentIndex]?.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {filteredItems[currentIndex]?.description}
-                </p>
               </div>
+
+              {/* Enhanced Navigation */}
+              <button 
+                onClick={prevImage}
+                className="absolute left-6 top-1/2 transform -translate-y-1/2 w-14 h-14 bg-background/90 backdrop-blur-md rounded-full flex items-center justify-center shadow-healing hover:bg-background transition-all hover:scale-110"
+              >
+                <ChevronLeft className="h-7 w-7 text-foreground" />
+              </button>
+              <button 
+                onClick={nextImage}
+                className="absolute right-6 top-1/2 transform -translate-y-1/2 w-14 h-14 bg-background/90 backdrop-blur-md rounded-full flex items-center justify-center shadow-healing hover:bg-background transition-all hover:scale-110"
+              >
+                <ChevronRight className="h-7 w-7 text-foreground" />
+              </button>
+
+              {/* Expand button */}
+              <button 
+                onClick={() => setSelectedImage(currentIndex)}
+                className="absolute top-6 right-6 w-12 h-12 bg-background/90 backdrop-blur-md rounded-full flex items-center justify-center shadow-healing hover:bg-background transition-all hover:scale-110"
+              >
+                <Expand className="h-6 w-6 text-foreground" />
+              </button>
             </div>
-
-            {/* Navigation Arrows */}
-            <button 
-              onClick={prevImage}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-card hover:bg-background transition-gentle"
-            >
-              <ChevronLeft className="h-6 w-6 text-foreground" />
-            </button>
-            <button 
-              onClick={nextImage}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-card hover:bg-background transition-gentle"
-            >
-              <ChevronRight className="h-6 w-6 text-foreground" />
-            </button>
-
-            {/* Expand button */}
-            <button 
-              onClick={() => setSelectedImage(currentIndex)}
-              className="absolute top-4 right-4 w-10 h-10 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-card hover:bg-background transition-gentle"
-            >
-              <Expand className="h-5 w-5 text-foreground" />
-            </button>
           </div>
 
-          {/* Dots indicator */}
-          <div className="flex justify-center gap-2 mt-6">
+          {/* Enhanced dots indicator */}
+          <div className="flex justify-center gap-3 mt-8">
             {filteredItems.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
+                className={`transition-all duration-300 ${
                   index === currentIndex 
-                    ? "bg-primary scale-125" 
-                    : "bg-muted hover:bg-primary/50"
+                    ? "w-8 h-3 bg-primary scale-125 rounded-full" 
+                    : "w-3 h-3 bg-muted hover:bg-primary/50 rounded-full hover:scale-110"
                 }`}
               />
             ))}
           </div>
         </div>
 
-        {/* Masonry Grid */}
-        <div className="masonry-grid mb-12">
+        {/* Enhanced Grid Gallery */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
           {filteredItems.map((item, index) => (
             <div 
               key={item.id}
-              className="masonry-item cursor-pointer hover-lift"
+              className="group cursor-pointer relative overflow-hidden rounded-2xl shadow-card hover:shadow-healing transition-all duration-500 hover:-translate-y-2 bg-card border border-border/50"
               onClick={() => setSelectedImage(index)}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-card rounded-xl overflow-hidden shadow-card border border-border">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={item.src} 
-                    alt={item.alt}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-                <div className="p-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    {item.category === "Community Events" && <Calendar className="h-4 w-4 text-primary" />}
-                    {item.category === "Support Groups" && <Users className="h-4 w-4 text-primary" />}
-                    {item.category === "Community" && <Heart className="h-4 w-4 text-primary" />}
-                    <span className="text-xs text-primary font-medium">
-                      {item.category}
-                    </span>
+              <div className="aspect-[4/5] overflow-hidden">
+                <img 
+                  src={item.src} 
+                  alt={item.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      {item.category === "Community Events" && <Calendar className="h-4 w-4 text-primary" />}
+                      {item.category === "Support Groups" && <Users className="h-4 w-4 text-primary" />}
+                      {item.category === "Community" && <Heart className="h-4 w-4 text-primary" />}
+                      <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded-full">
+                        {item.category}
+                      </span>
+                    </div>
+                    <h4 className="font-bold text-foreground mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-snug line-clamp-2">
+                      {item.description}
+                    </p>
                   </div>
-                  <h4 className="font-semibold text-foreground mb-1">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {item.description}
-                  </p>
+                </div>
+                
+                {/* Expand icon */}
+                <div className="absolute top-3 right-3 w-8 h-8 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
+                  <Expand className="h-4 w-4 text-foreground" />
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <Button variant="hero" size="lg">
+        {/* Enhanced CTA */}
+        <div className="text-center bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl p-12 border border-primary/10">
+          <h3 className="text-2xl font-bold mb-4 text-foreground">
             Share Your Story
-          </Button>
+          </h3>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Every moment in our empathy family is worth celebrating. Share your photos 
+            and stories to inspire others in their healing journey.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary-hover transition-all hover:scale-105 shadow-soft">
+              Upload Your Photos
+            </button>
+            <button className="px-8 py-4 border-2 border-primary text-primary rounded-xl font-semibold hover:bg-primary hover:text-primary-foreground transition-all hover:scale-105">
+              Submit Your Story
+            </button>
+          </div>
         </div>
       </div>
 

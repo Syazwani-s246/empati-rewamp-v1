@@ -88,173 +88,159 @@ const PressSection = () => {
   };
 
   return (
-    <section id="press" className="py-20 bg-background">
+    <section id="press" className="py-20 bg-muted/20">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Press</span> Coverage
+            <span className="text-gradient">Media</span> Recognition
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Our innovative approach to mental health support has been recognized 
-            by leading publications and health organizations worldwide.
+            Our innovative approach to community mental health has gained recognition 
+            from leading media outlets and industry publications.
           </p>
         </div>
 
-        {/* Featured Press Item */}
-        <div className="max-w-5xl mx-auto mb-16">
-          <div className="bg-card rounded-3xl p-8 shadow-healing border border-border overflow-hidden">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              {/* Newspaper Image */}
-              <div className="relative">
-                <div className="aspect-[3/4] rounded-xl overflow-hidden shadow-warm">
+        {/* Featured Story - Clean Design */}
+        <div className="max-w-5xl mx-auto mb-20">
+          <div className="bg-gradient-to-br from-card to-card/50 rounded-3xl overflow-hidden shadow-healing border border-border/20">
+            <div className="grid lg:grid-cols-5 gap-0">
+              {/* Image Section */}
+              <div className="lg:col-span-2 relative">
+                <div className="aspect-[4/5] lg:aspect-auto lg:h-full">
                   <img 
                     src={pressCoverage} 
-                    alt="Newspaper coverage of NGO Empati" 
+                    alt="Featured press coverage" 
                     className="w-full h-full object-cover"
                   />
-                </div>
-                <div className="absolute -bottom-4 -right-4 p-3 bg-primary rounded-xl shadow-healing text-primary-foreground">
-                  <Calendar className="h-6 w-6" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
                 </div>
               </div>
-
-              {/* Content */}
-              <div>
-                <Badge className="mb-4 bg-primary/10 text-primary">
-                  Featured Story
-                </Badge>
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  "Revolutionary Approach: NGO Empati Breaks Down Barriers in Community Mental Health"
-                </h3>
-                <p className="text-lg text-muted-foreground mb-4">
-                  The Mental Health Tribune's in-depth feature explores how our unified 
-                  empathy family model is transforming community mental health support 
-                  by dissolving traditional boundaries between providers and recipients.
-                </p>
-                <div className="flex items-center gap-4 mb-6 text-sm text-muted-foreground">
-                  <span>The Mental Health Tribune</span>
-                  <span>•</span>
-                  <span>December 15, 2023</span>
+              
+              {/* Content Section */}
+              <div className="lg:col-span-3 p-8 lg:p-12 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 w-fit">
+                  <Calendar className="h-4 w-4" />
+                  Featured Coverage
                 </div>
-                <Button variant="outline" className="flex items-center gap-2">
+                
+                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4 leading-tight">
+                  "Revolutionary Community Mental Health Approach Transforms Lives"
+                </h3>
+                
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  An in-depth feature exploring how NGO Empati's unified empathy family model 
+                  is breaking down traditional barriers and creating lasting impact in mental health support.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+                  <div className="text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">The Mental Health Tribune</span>
+                  </div>
+                  <div className="hidden sm:block w-1 h-1 bg-muted-foreground rounded-full"></div>
+                  <div className="text-sm text-muted-foreground">December 15, 2023</div>
+                </div>
+                
+                <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:bg-primary-hover transition-all hover:scale-105 shadow-soft w-fit">
                   Read Full Article
                   <ExternalLink className="h-4 w-4" />
-                </Button>
+                </button>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Press Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {pressItems.slice(1).map((item, index) => {
-            const DeviceIcon = getDeviceIcon(item.device);
-            return (
-              <div 
-                key={item.id}
-                className="group cursor-pointer"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Device Mockup */}
-                <div className="flex justify-center mb-4">
-                  <div className={`${getDeviceClass(item.device)} relative`}>
-                    {item.device === "newspaper" ? (
-                      <div className="w-full h-full bg-background border-2 border-border rounded-lg p-4 shadow-card group-hover:shadow-warm transition-all">
-                        <div className="text-xs font-bold mb-2 text-primary">
-                          {item.publication}
-                        </div>
-                        <div className="text-xs font-semibold mb-1 line-clamp-3">
-                          {item.title}
-                        </div>
-                        <div className="text-xs text-muted-foreground mb-2">
-                          {item.date}
-                        </div>
-                        <div className="text-xs text-muted-foreground line-clamp-4">
-                          {item.summary}
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="w-full h-full bg-foreground rounded-lg p-1 shadow-card group-hover:shadow-warm transition-all">
-                        <div className="w-full h-full bg-background rounded-md p-3 overflow-hidden">
-                          <div className="text-xs font-bold mb-2 text-primary">
-                            {item.publication}
-                          </div>
-                          <div className="text-xs font-semibold mb-1 line-clamp-2">
-                            {item.title}
-                          </div>
-                          <div className="text-xs text-muted-foreground mb-2">
-                            {item.date}
-                          </div>
-                          <div className="text-xs text-muted-foreground line-clamp-3">
-                            {item.summary}
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                    
-                    {/* Device indicator */}
-                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center shadow-card">
-                      <DeviceIcon className="h-4 w-4 text-secondary-foreground" />
-                    </div>
-                  </div>
+        {/* Media Coverage Grid - Cleaner Layout */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {pressItems.slice(1).map((item, index) => (
+            <div 
+              key={item.id}
+              className="group bg-card rounded-2xl p-6 shadow-card border border-border hover:shadow-healing transition-all duration-300 hover:-translate-y-1"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {/* Publication Header */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                  <ExternalLink className="h-5 w-5 text-primary" />
                 </div>
-
-                {/* Hover overlay */}
-                <div className="text-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Button variant="outline" size="sm" className="text-xs">
-                    Read Article
-                  </Button>
+                <div>
+                  <div className="font-semibold text-sm text-primary">{item.publication}</div>
+                  <div className="text-xs text-muted-foreground">{item.date}</div>
                 </div>
               </div>
-            );
-          })}
+              
+              {/* Article Content */}
+              <h4 className="font-bold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors">
+                {item.title}
+              </h4>
+              
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                {item.summary}
+              </p>
+              
+              {/* Article Type Badge */}
+              <div className="flex items-center justify-between">
+                <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">
+                  {item.type === "digital" ? "Digital Media" : "Print Media"}
+                </span>
+                <button className="text-primary hover:text-primary-hover transition-colors text-sm font-medium">
+                  Read More →
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Awards & Recognition */}
-        <div className="bg-secondary/10 rounded-3xl p-8 border border-secondary/20 shadow-warm">
-          <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
-            Awards & Recognition
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
+        {/* Awards Section - Improved Design */}
+        <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl p-8 lg:p-12 border border-primary/10 mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4 text-foreground">
+              Awards & Recognition
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our commitment to innovation in mental health support has been recognized by industry leaders.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 award: "Mental Health Innovation Award",
                 year: "2023",
                 organization: "National Mental Health Association",
-                description: "For revolutionary community-centered approach"
+                description: "For revolutionary community-centered approach to mental wellness"
               },
               {
                 award: "Community Impact Excellence",
-                year: "2022",
+                year: "2022", 
                 organization: "Regional Health Council",
-                description: "Outstanding volunteer engagement program"
+                description: "Outstanding volunteer engagement and peer support program"
               },
               {
                 award: "Best Practices in Peer Support",
                 year: "2021",
                 organization: "International Peer Support Association",
-                description: "Innovative peer counselor training model"
+                description: "Innovative peer counselor training and empowerment model"
               }
             ].map((award, index) => (
               <div 
                 key={award.award}
-                className="text-center p-6 bg-card/50 rounded-xl border border-border/50"
+                className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border/50 text-center hover:shadow-soft transition-all"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏆</span>
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">🏆</span>
                 </div>
-                <h4 className="font-semibold text-foreground mb-2">
+                <h4 className="font-bold text-foreground mb-2 text-lg">
                   {award.award}
                 </h4>
-                <div className="text-primary font-medium mb-2">
+                <div className="text-2xl font-bold text-primary mb-2">
                   {award.year}
                 </div>
-                <div className="text-sm text-muted-foreground mb-2">
+                <div className="text-sm font-medium text-muted-foreground mb-3">
                   {award.organization}
                 </div>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {award.description}
                 </p>
               </div>
@@ -262,18 +248,23 @@ const PressSection = () => {
           </div>
         </div>
 
-        {/* Press Contact */}
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold mb-4 text-foreground">
+        {/* Media Contact - Enhanced */}
+        <div className="text-center bg-card rounded-3xl p-12 border border-border shadow-card">
+          <h3 className="text-3xl font-bold mb-4 text-foreground">
             Media Inquiries
           </h3>
-          <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Interested in covering our story or learning more about our innovative approach? 
-            We'd love to share our journey with your audience.
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            Interested in featuring our story or learning more about our innovative approach? 
+            Our media team is ready to share insights and arrange interviews.
           </p>
-          <Button variant="hero" size="lg">
-            Contact Press Team
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary-hover transition-all hover:scale-105 shadow-soft">
+              Contact Media Team
+            </button>
+            <button className="px-8 py-4 border-2 border-primary text-primary rounded-xl font-semibold hover:bg-primary hover:text-primary-foreground transition-all hover:scale-105">
+              Download Press Kit
+            </button>
+          </div>
         </div>
       </div>
     </section>

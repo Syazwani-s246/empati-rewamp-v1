@@ -5,15 +5,12 @@ import heroCommunity from "@/assets/hero-community.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
-      {/* Background with overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={heroCommunity} 
-          alt="Community support circle" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 hero-gradient opacity-95"></div>
+    <section id="home" className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-background to-accent/20">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 z-0 opacity-30">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 right-20 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-accent/20 rounded-full blur-2xl"></div>
       </div>
 
       {/* Content */}
