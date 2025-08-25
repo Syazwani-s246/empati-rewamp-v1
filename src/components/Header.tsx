@@ -28,7 +28,7 @@ const Header = () => {
               alt="NGO Empati" 
               className="h-8 w-8 animate-gentle-bounce"
             />
-            <span className="text-xl font-bold text-gradient">NGO Empati</span>
+            <span className="text-xl font-bold text-butterfly-gradient">NGO Empati</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -49,8 +49,8 @@ const Header = () => {
             <Button variant="outline" size="sm">
               Member Login
             </Button>
-            <Button variant="hero" size="sm">
-              Get Involved
+            <Button variant="butterfly" size="sm">
+              Bergabung
             </Button>
           </div>
 
@@ -80,8 +80,8 @@ const Header = () => {
               <Button variant="outline" size="sm">
                 Member Login
               </Button>
-              <Button variant="hero" size="sm">
-                Get Involved
+              <Button variant="butterfly" size="sm">
+                Bergabung
               </Button>
             </div>
           </div>
