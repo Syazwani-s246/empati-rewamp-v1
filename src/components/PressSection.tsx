@@ -88,106 +88,120 @@ const PressSection = () => {
   };
 
   return (
-    <section id="press" className="py-20 bg-muted/20">
+    <section id="press" className="py-24 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Media</span> Recognition
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <ExternalLink className="h-4 w-4" />
+            Press & Media
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            Media Recognition
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Our innovative approach to community mental health has gained recognition 
-            from leading media outlets and industry publications.
+            from leading media outlets and industry publications worldwide.
           </p>
         </div>
 
-        {/* Featured Story - Clean Design */}
-        <div className="max-w-5xl mx-auto mb-20">
-          <div className="bg-gradient-to-br from-card to-card/50 rounded-3xl overflow-hidden shadow-healing border border-border/20">
-            <div className="grid lg:grid-cols-5 gap-0">
+        {/* Featured Story - Modern Design */}
+        <div className="max-w-6xl mx-auto mb-24">
+          <div className="group relative bg-gradient-to-br from-card via-card to-muted/20 rounded-3xl overflow-hidden border border-border/20 hover:shadow-2xl transition-all duration-500">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
-              <div className="lg:col-span-2 relative">
-                <div className="aspect-[4/5] lg:aspect-auto lg:h-full">
+              <div className="relative overflow-hidden">
+                <div className="aspect-[16/10] lg:aspect-[4/5] lg:h-full">
                   <img 
                     src={pressCoverage} 
                     alt="Featured press coverage" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-background/10 via-transparent to-primary/10"></div>
                 </div>
               </div>
               
               {/* Content Section */}
-              <div className="lg:col-span-3 p-8 lg:p-12 flex flex-col justify-center">
-                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 w-fit">
+              <div className="p-8 lg:p-12 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 w-fit backdrop-blur-sm">
                   <Calendar className="h-4 w-4" />
                   Featured Coverage
                 </div>
                 
-                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4 leading-tight">
+                <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-6 leading-tight group-hover:text-primary transition-colors duration-300">
                   "Revolutionary Community Mental Health Approach Transforms Lives"
                 </h3>
                 
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                   An in-depth feature exploring how NGO Empati's unified empathy family model 
                   is breaking down traditional barriers and creating lasting impact in mental health support.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
-                  <div className="text-sm text-muted-foreground">
-                    <span className="font-medium text-foreground">The Mental Health Tribune</span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8 p-4 bg-muted/30 rounded-xl border border-border/30">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="font-semibold text-foreground">The Mental Health Tribune</span>
                   </div>
                   <div className="hidden sm:block w-1 h-1 bg-muted-foreground rounded-full"></div>
-                  <div className="text-sm text-muted-foreground">December 15, 2023</div>
+                  <div className="text-sm text-muted-foreground font-medium">December 15, 2023</div>
                 </div>
                 
-                <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:bg-primary-hover transition-all hover:scale-105 shadow-soft w-fit">
-                  Read Full Article
-                  <ExternalLink className="h-4 w-4" />
+                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-primary-hover text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 w-fit group/btn">
+                  <span>Read Full Article</span>
+                  <ExternalLink className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Media Coverage Grid - Cleaner Layout */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        {/* Media Coverage Grid - Modern Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
           {pressItems.slice(1).map((item, index) => (
-            <div 
+            <article 
               key={item.id}
-              className="group bg-card rounded-2xl p-6 shadow-card border border-border hover:shadow-healing transition-all duration-300 hover:-translate-y-1"
+              className="group relative bg-gradient-to-br from-card via-card to-muted/10 rounded-2xl overflow-hidden border border-border/50 hover:border-primary/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Publication Header */}
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <ExternalLink className="h-5 w-5 text-primary" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-transparent to-secondary/0 group-hover:from-primary/5 group-hover:to-secondary/5 transition-all duration-500"></div>
+              
+              {/* Content */}
+              <div className="relative p-6">
+                {/* Publication Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <ExternalLink className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-sm text-primary group-hover:text-primary-hover transition-colors">{item.publication}</div>
+                      <div className="text-xs text-muted-foreground font-medium">{item.date}</div>
+                    </div>
+                  </div>
+                  <span className="inline-block px-3 py-1 bg-gradient-to-r from-secondary/10 to-secondary/20 text-secondary text-xs font-medium rounded-full border border-secondary/20">
+                    {item.type === "digital" ? "Digital" : "Print"}
+                  </span>
                 </div>
-                <div>
-                  <div className="font-semibold text-sm text-primary">{item.publication}</div>
-                  <div className="text-xs text-muted-foreground">{item.date}</div>
+                
+                {/* Article Content */}
+                <h4 className="font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors duration-300 text-lg">
+                  {item.title}
+                </h4>
+                
+                <p className="text-sm text-muted-foreground leading-relaxed mb-6 line-clamp-3">
+                  {item.summary}
+                </p>
+                
+                {/* Read More Button */}
+                <div className="pt-4 border-t border-border/30">
+                  <button className="inline-flex items-center gap-2 text-primary hover:text-primary-hover transition-all font-medium text-sm group/btn">
+                    <span>Read Article</span>
+                    <ExternalLink className="h-4 w-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-0.5 transition-transform" />
+                  </button>
                 </div>
               </div>
-              
-              {/* Article Content */}
-              <h4 className="font-bold text-foreground mb-3 leading-tight group-hover:text-primary transition-colors">
-                {item.title}
-              </h4>
-              
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                {item.summary}
-              </p>
-              
-              {/* Article Type Badge */}
-              <div className="flex items-center justify-between">
-                <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">
-                  {item.type === "digital" ? "Digital Media" : "Print Media"}
-                </span>
-                <button className="text-primary hover:text-primary-hover transition-colors text-sm font-medium">
-                  Read More →
-                </button>
-              </div>
-            </div>
+            </article>
           ))}
         </div>
 
