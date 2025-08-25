@@ -20,8 +20,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline transition-gentle",
         hero: "hero-gradient text-primary-foreground font-semibold shadow-glow hover:shadow-healing hover:-translate-y-1 transition-gentle border-0",
         warm: "warm-gradient text-secondary-foreground border border-secondary/20 hover:shadow-warm transition-gentle",
-        community: "community-gradient text-primary-foreground hover:opacity-90 transition-gentle shadow-warm hover:shadow-glow",
-        butterfly: "butterfly-gradient text-primary-foreground font-medium shadow-soft hover:shadow-warm hover:-translate-y-0.5 transition-gentle border-0"
+        community: "community-gradient text-primary-foreground hover:opacity-90 transition-gentle shadow-warm hover:shadow-glow"
       },
       size: {
         default: "h-10 px-4 py-2",
