@@ -29,14 +29,14 @@ const HeroSection = () => {
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
-            <span className="text-hero-gradient">Empathy</span>{" "}
-            <span className="text-foreground">in Action</span>
+            <span className="text-butterfly-gradient">Empati</span>{" "}
+            <span className="text-foreground">Transforming Lives</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up">
-            Where community members and volunteers unite as one empathy family, 
-            transforming lives through compassionate mental health support and healing.
+            Membangun masyarakat yang empati, saling peduli, dan mendukung kesehatan mental 
+            melalui kegiatan komunitas yang bermakna dan transformatif.
           </p>
 
           {/* Stats */}
@@ -58,28 +58,28 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
             <Button 
-              variant="hero" 
+              variant="butterfly" 
               size="lg" 
               className="text-lg px-8 py-6 h-auto"
             >
-              Join Our Mission
+              Bergabung dengan Kami
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
-              variant="outline" 
+              variant="warm" 
               size="lg" 
-              className="text-lg px-8 py-6 h-auto bg-background/20 backdrop-blur-sm hover:bg-background/30"
+              className="text-lg px-8 py-6 h-auto"
             >
-              Learn Our Story
+              Pelajari Lebih Lanjut
             </Button>
           </div>
 
           {/* Mission statement */}
           <div className="mt-16 p-6 bg-background/10 backdrop-blur-sm rounded-2xl border border-border/20 shadow-card animate-fade-in">
             <p className="text-lg italic text-foreground/90 leading-relaxed">
-              "We believe that healing happens in community. Every member and volunteer 
-              brings unique strengths to our empathy family, creating a supportive 
-              ecosystem where mental wellness flourishes through shared compassion."
+              "Kami percaya bahwa kesembuhan terjadi dalam komunitas. Setiap anggota dan relawan 
+              membawa kekuatan unik untuk keluarga empati kami, menciptakan ekosistem dukungan 
+              di mana kesehatan mental berkembang melalui kasih sayang bersama."
             </p>
           </div>
         </div>

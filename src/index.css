@@ -8,52 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* NGO Empati Design System - Modern Gen Z Healing Colors */
-    --background: 0 0% 98%; /* Bright white base */
-    --foreground: 220 15% 15%; /* Rich dark text */
+    /* NGO Empati Design System - Warm Empathy Colors */
+    --background: 45 100% 96%; /* Cream/warm white */
+    --foreground: 30 25% 15%; /* Warm dark brown */
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 15% 15%;
+    --card: 45 80% 98%;
+    --card-foreground: 30 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 15%;
+    --popover: 45 80% 98%;
+    --popover-foreground: 30 25% 15%;
 
-    /* Primary: Vibrant Sage Green for energy and growth */
-    --primary: 95 35% 55%; /* More saturated sage green */
-    --primary-foreground: 0 0% 98%;
-    --primary-hover: 95 40% 50%;
+    /* Primary: Rich Orange for warmth and connection */
+    --primary: 35 85% 55%;
+    --primary-foreground: 45 100% 96%;
+    --primary-hover: 35 90% 48%;
 
-    /* Secondary: Bright Sunny Yellow for optimism and warmth */
-    --secondary: 48 95% 65%; /* Vibrant sunny yellow */
-    --secondary-foreground: 220 15% 15%;
-    --secondary-hover: 48 100% 60%;
+    /* Secondary: Golden Yellow for hope and positivity */
+    --secondary: 45 90% 60%;
+    --secondary-foreground: 30 25% 15%;
+    --secondary-hover: 45 95% 55%;
 
-    /* Muted tones with subtle color */
-    --muted: 95 20% 92%;
-    --muted-foreground: 220 10% 45%;
+    /* Muted tones with warmth */
+    --muted: 40 60% 92%;
+    --muted-foreground: 30 15% 45%;
 
-    /* Accent: Fresh mint for modern touch */
-    --accent: 160 50% 85%;
-    --accent-foreground: 220 15% 15%;
+    /* Accent: Soft terracotta */
+    --accent: 25 65% 75%;
+    --accent-foreground: 30 25% 15%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 45 100% 96%;
 
-    --border: 95 25% 88%;
-    --input: 95 25% 90%;
-    --ring: 95 35% 55%;
+    --border: 40 30% 88%;
+    --input: 40 30% 88%;
+    --ring: 35 85% 55%;
 
-    /* Modern vibrant gradients */
-    --gradient-healing: linear-gradient(135deg, hsl(48 95% 65%), hsl(95 35% 55%));
-    --gradient-warm: linear-gradient(135deg, hsl(48 100% 70%), hsl(35 90% 75%));
-    --gradient-community: linear-gradient(120deg, hsl(95 40% 60%), hsl(160 60% 70%), hsl(48 95% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(95 35% 55%) 0%, hsl(160 50% 60%) 50%, hsl(48 95% 65%) 100%);
+    /* Empathy-inspired gradients */
+    --gradient-healing: linear-gradient(135deg, hsl(35 85% 55%) 0%, hsl(25 85% 60%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(45 90% 60%) 0%, hsl(35 85% 55%) 100%);
+    --gradient-community: linear-gradient(120deg, hsl(35 85% 55%) 0%, hsl(45 90% 60%) 50%, hsl(25 85% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(35 85% 55%) 0%, hsl(45 90% 60%) 50%, hsl(25 85% 60%) 100%);
+    --gradient-butterfly: linear-gradient(135deg, hsl(25 85% 60%) 0%, hsl(35 85% 55%) 50%, hsl(45 90% 65%) 100%);
 
-    /* Dynamic shadows with color */
-    --shadow-soft: 0 4px 20px hsl(95 35% 55% / 0.15);
-    --shadow-warm: 0 8px 30px hsl(48 95% 65% / 0.2);
-    --shadow-card: 0 2px 12px hsl(95 20% 85% / 0.4);
-    --shadow-glow: 0 0 40px hsl(48 95% 65% / 0.3);
+    /* Warm shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(35 85% 55% / 0.15), 0 2px 4px -1px hsl(35 85% 55% / 0.08);
+    --shadow-warm: 0 10px 15px -3px hsl(25 85% 60% / 0.15), 0 4px 6px -2px hsl(25 85% 60% / 0.08);
+    --shadow-card: 0 2px 4px 0 hsl(35 85% 55% / 0.12), 0 1px 2px 0 hsl(35 85% 55% / 0.08);
+    --shadow-glow: 0 0 0 1px hsl(35 85% 55% / 0.08), 0 0 20px hsl(35 85% 55% / 0.12);
 
     /* Smooth modern transitions */
     --transition-gentle: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -79,47 +80,48 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Dark mode with modern, vibrant tones */
-    --background: 220 20% 8%;
-    --foreground: 0 0% 98%;
+    /* Dark mode with warm empathy tones */
+    --background: 30 25% 8%;
+    --foreground: 45 80% 95%;
 
-    --card: 220 20% 12%;
-    --card-foreground: 0 0% 98%;
+    --card: 30 25% 10%;
+    --card-foreground: 45 80% 95%;
 
-    --popover: 220 20% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 30 25% 10%;
+    --popover-foreground: 45 80% 95%;
 
-    --primary: 95 50% 65%;
-    --primary-foreground: 220 20% 8%;
-    --primary-hover: 95 55% 70%;
+    --primary: 35 85% 65%;
+    --primary-foreground: 30 25% 8%;
+    --primary-hover: 35 90% 58%;
 
-    --secondary: 48 90% 70%;
-    --secondary-foreground: 220 20% 8%;
-    --secondary-hover: 48 95% 75%;
+    --secondary: 45 80% 70%;
+    --secondary-foreground: 30 25% 8%;
+    --secondary-hover: 45 85% 65%;
 
-    --muted: 220 20% 18%;
-    --muted-foreground: 95 10% 70%;
+    --muted: 30 20% 15%;
+    --muted-foreground: 40 15% 65%;
 
-    --accent: 160 40% 25%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 25 50% 35%;
+    --accent-foreground: 45 80% 95%;
 
     --destructive: 0 75% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 45 80% 95%;
 
-    --border: 220 20% 22%;
-    --input: 220 20% 22%;
-    --ring: 95 50% 65%;
+    --border: 30 20% 18%;
+    --input: 30 20% 18%;
+    --ring: 35 85% 65%;
 
-    /* Dark mode vibrant gradients */
-    --gradient-healing: linear-gradient(135deg, hsl(48 90% 70%), hsl(95 50% 65%));
-    --gradient-warm: linear-gradient(135deg, hsl(48 85% 65%), hsl(35 80% 60%));
-    --gradient-community: linear-gradient(120deg, hsl(95 50% 65%), hsl(160 60% 60%), hsl(48 90% 70%));
-    --gradient-hero: linear-gradient(135deg, hsl(95 50% 65%) 0%, hsl(160 50% 55%) 50%, hsl(48 90% 70%) 100%);
+    /* Dark mode empathy gradients */
+    --gradient-healing: linear-gradient(135deg, hsl(35 85% 65%) 0%, hsl(25 85% 70%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(45 80% 70%) 0%, hsl(35 85% 65%) 100%);
+    --gradient-community: linear-gradient(120deg, hsl(35 85% 65%) 0%, hsl(45 80% 70%) 50%, hsl(25 85% 70%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(35 85% 65%) 0%, hsl(45 80% 70%) 50%, hsl(25 85% 70%) 100%);
+    --gradient-butterfly: linear-gradient(135deg, hsl(25 85% 70%) 0%, hsl(35 85% 65%) 50%, hsl(45 85% 75%) 100%);
 
-    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.4);
-    --shadow-warm: 0 8px 30px hsl(95 50% 65% / 0.3);
-    --shadow-card: 0 2px 12px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 40px hsl(48 90% 70% / 0.2);
+    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.25), 0 2px 4px -1px hsl(0 0% 0% / 0.15);
+    --shadow-warm: 0 10px 15px -3px hsl(35 85% 65% / 0.25), 0 4px 6px -2px hsl(35 85% 65% / 0.15);
+    --shadow-card: 0 2px 4px 0 hsl(0 0% 0% / 0.2), 0 1px 2px 0 hsl(0 0% 0% / 0.12);
+    --shadow-glow: 0 0 0 1px hsl(35 85% 65% / 0.12), 0 0 20px hsl(35 85% 65% / 0.2);
   }
 }
 
@@ -156,6 +158,10 @@ All colors MUST be HSL.
     background: var(--gradient-hero);
   }
 
+  .butterfly-gradient {
+    background: var(--gradient-butterfly);
+  }
+
   .shadow-healing {
     box-shadow: var(--shadow-soft);
   }
@@ -189,11 +195,17 @@ All colors MUST be HSL.
   }
 
   .text-hero-gradient {
-    background: linear-gradient(135deg, hsl(95 50% 40%) 0%, hsl(48 100% 55%) 50%, hsl(95 60% 35%) 100%);
+    background: var(--gradient-hero);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 0 20px hsl(48 100% 55% / 0.3);
+  }
+
+  .text-butterfly-gradient {
+    background: var(--gradient-butterfly);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .hover-lift {
