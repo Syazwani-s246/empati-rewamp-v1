@@ -1,36 +1,37 @@
 # empati-rewamp-v1
 
-## Project Info
+## 📌 Project Info
 
-**Prototype URL:**  
-https://lovable.dev/projects/758c1759-ea01-42aa-91bc-8c67aca62c20
+**Prototype Preview:**  
+[View the Prototype on Lovable.dev](https://lovable.dev/projects/758c1759-ea01-42aa-91bc-8c67aca62c20)
 
 ---
 
-## How to Edit This Code
+## 🚀 Getting Started
 
-You can work locally using your preferred IDE.
+You can run this project locally using your preferred IDE. Follow the steps below to set up the development environment.
 
-### Steps to work locally:
+### 🔧 Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL
+# 1. Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory
+# 2. Navigate into the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies
+# 3. Install dependencies
 npm install
 
-# Step 4: Start the development server with auto-reloading and instant preview
+# 4. Start the development server
 npm run dev
 
+## 🛠️ Tech Stack
 
-### This project is built with:
+This project is built using the following technologies:
 
--Vite – Fast front-end build tool
--TypeScript – Strongly typed JavaScript
--React – UI library for building interfaces
--shadcn-ui – UI components built with Radix UI and Tailwind
--Tailwind CSS – Utility-first CSS framework
+- **[Vite](https://vitejs.dev/)** – Lightning-fast frontend build tool  
+- **[TypeScript](https://www.typescriptlang.org/)** – Strongly-typed JavaScript  
+- **[React](https://reactjs.org/)** – Library for building user interfaces  
+- **[shadcn/ui](https://ui.shadcn.com/)** – UI components powered by Radix UI and Tailwind CSS  
+- **[Tailwind CSS](https://tailwindcss.com/)** – Utility-first CSS framework  
