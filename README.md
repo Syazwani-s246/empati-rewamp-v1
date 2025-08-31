@@ -1,6 +1,3 @@
-Got it 👍 — you’re right, in your original draft the **Tech Stack** section wasn’t properly fenced in Markdown. Here’s the **fully corrected README in proper Markdown format**:
-
-````md
 # empati-rewamp-v1  
 
 ## 📌 Project Info  
