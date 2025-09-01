@@ -8,6 +8,7 @@ import PartnershipSection from "@/components/PartnershipSection";
 import PressSection from "@/components/PressSection";
 import GetInvolvedSection from "@/components/GetInvolvedSection";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <GetInvolvedSection />
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 };
