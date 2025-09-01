@@ -32,7 +32,7 @@ const GallerySection = () => {
   const displayedItems = showAll ? filteredItems : filteredItems.slice(0, itemsPerRow);
 
   return (
-    <section id="galeri" className="py-20 bg-gradient-to-br from-background to-primary/5">
+    <section id="gallery" className="py-20 bg-gradient-to-br from-background to-primary/5">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Tajuk Seksyen */}
         <div className="text-center mb-16">

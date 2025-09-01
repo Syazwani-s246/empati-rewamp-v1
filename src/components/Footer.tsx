@@ -1,4 +1,4 @@
-import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Heart, Mail, Phone, MapPin, FileText, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import empatiLogo from "@/assets/empati-logo.png";
 
@@ -59,25 +59,33 @@ const Footer = () => {
                 <span className="text-2xl font-bold">NGO Empati</span>
               </div>
               <p className="text-background/80 leading-relaxed mb-6">
-                Creating unified communities where traditional boundaries between staff and 
-                volunteers dissolve into one empathy family working toward shared healing 
-                and mental wellness for all.
+                Kelab advokasi pulih mental yang berdedikasi untuk membina komuniti penyembuhan melalui empati, sokongan, dan pendidikan.
               </p>
               
               {/* Contact Info */}
               <div className="space-y-3 mb-6">
+
+
+                
+
                 <div className="flex items-center gap-3">
+                  <FileText className="h-4 w-4 text-primary" />
+                  <span className="text-background/90">PPM-016-10-21072022</span>
+                </div>
+
+                
+                {/* <div className="flex items-center gap-3">
                   <Phone className="h-4 w-4 text-primary" />
                   <span className="text-background/90">(555) 123-HELP</span>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-3">
                   <Mail className="h-4 w-4 text-primary" />
-                  <span className="text-background/90">hello@ngoempati.org</span>
+                  <span className="text-background/90">empati2022@gmail.com</span>
                 </div>
-                <div className="flex items-center gap-3">
+                {/* <div className="flex items-center gap-3">
                   <MapPin className="h-4 w-4 text-primary" />
                   <span className="text-background/90">123 Community St, Healing City</span>
-                </div>
+                </div> */}
               </div>
 
               {/* Social Links */}
@@ -96,7 +104,7 @@ const Footer = () => {
             </div>
 
             {/* Links Sections */}
-            {Object.entries(footerLinks).map(([title, links]) => (
+            {/* {Object.entries(footerLinks).map(([title, links]) => (
               <div key={title}>
                 <h3 className="text-lg font-semibold mb-6 text-background">
                   {title}
@@ -114,12 +122,12 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
 
         {/* Crisis Support Banner */}
-        <div className="py-8 border-t border-background/20">
+        {/* <div className="py-8 border-t border-background/20">
           <div className="bg-primary/10 rounded-2xl p-6 text-center">
             <div className="flex items-center justify-center gap-2 mb-3">
               <Heart className="h-6 w-6 text-primary" />
@@ -139,15 +147,16 @@ const Footer = () => {
               </Button>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom Bar */}
         <div className="py-8 border-t border-background/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-background/70 text-sm">
-              © 2024 NGO Empati. All rights reserved. Building empathy families since 2019.
-            </div>
-            <div className="flex gap-6 text-sm">
+           <div className="text-background/70 text-sm">
+  © {new Date().getFullYear()} NGO Empati. Hakcipta terpelihara. Membina keluarga Empati sejak 2019.
+</div>
+
+            {/* <div className="flex gap-6 text-sm">
               <a href="#" className="text-background/70 hover:text-primary transition-gentle">
                 Privacy Policy
               </a>
@@ -157,7 +166,9 @@ const Footer = () => {
               <a href="#" className="text-background/70 hover:text-primary transition-gentle">
                 Accessibility
               </a>
-            </div>
+            </div> */}
+
+
           </div>
         </div>
       </div>

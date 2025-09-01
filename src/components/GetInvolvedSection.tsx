@@ -1,90 +1,99 @@
 import { Heart, Users, ArrowRight, CheckCircle, Clock, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+// import { Badge } from "@/components/ui/badge";
 
 const GetInvolvedSection = () => {
-  const memberBenefits = [
-    "Access to all support programs and healing circles",
-    "One-on-one peer counseling and professional support",
-    "Family programs and community workshops",
-    "Crisis intervention and 24/7 support network",
-    "Opportunity to become a peer counselor",
-    "Ongoing mental health education and resources"
-  ];
+const memberBenefits = [
+  "Akses kepada semua program sokongan dan sesi pemulihan",
+  "Kaunseling dengan rakan sebaya dan sokongan profesional",
+  "Program keluarga dan bengkel komuniti",
+  "Campur tangan krisis dan rangkaian sokongan 24/7",
+  "Peluang untuk menjadi penyokong rakan sebaya",
+  "Pendidikan dan sumber kesihatan mental berterusan"
+];
 
-  const volunteerBenefits = [
-    "Comprehensive training in mental health support",
-    "Flexible scheduling to fit your availability",
-    "Meaningful contribution to community healing",
-    "Professional development and skill building",
-    "Access to ongoing support and supervision",
-    "Part of a collaborative empathy family"
-  ];
+const volunteerBenefits = [
+  "Latihan menyeluruh dalam sokongan kesihatan mental",
+  "Jadual fleksibel mengikut ketersediaan anda",
+  "Sumbangan bermakna kepada pemulihan komuniti",
+  "Pembangunan profesional dan peningkatan kemahiran",
+  "Akses kepada sokongan dan pemantauan berterusan",
+  "Menjadi sebahagian daripada keluarga empati yang kolaboratif"
+];
 
-  const volunteerRoles = [
-    {
-      title: "Peer Support Facilitator",
-      time: "4-6 hours/week",
-      training: "20 hours",
-      description: "Lead support groups and facilitate healing conversations"
-    },
-    {
-      title: "Crisis Response Volunteer",
-      time: "On-call shifts",
-      training: "40 hours",
-      description: "Provide immediate support during mental health crises"
-    },
-    {
-      title: "Community Educator",
-      time: "2-4 hours/week",
-      training: "15 hours",
-      description: "Deliver mental health literacy programs in schools and workplaces"
-    },
-    {
-      title: "Family Program Assistant",
-      time: "3-5 hours/week",
-      training: "25 hours",
-      description: "Support families navigating mental health challenges together"
-    }
-  ];
+
+  // const volunteerRoles = [
+  //   {
+  //     title: "Peer Support Facilitator",
+  //     time: "4-6 hours/week",
+  //     training: "20 hours",
+  //     description: "Lead support groups and facilitate healing conversations"
+  //   },
+  //   {
+  //     title: "Crisis Response Volunteer",
+  //     time: "On-call shifts",
+  //     training: "40 hours",
+  //     description: "Provide immediate support during mental health crises"
+  //   },
+  //   {
+  //     title: "Community Educator",
+  //     time: "2-4 hours/week",
+  //     training: "15 hours",
+  //     description: "Deliver mental health literacy programs in schools and workplaces"
+  //   },
+  //   {
+  //     title: "Family Program Assistant",
+  //     time: "3-5 hours/week",
+  //     training: "25 hours",
+  //     description: "Support families navigating mental health challenges together"
+  //   }
+  // ];
 
   return (
-    <section id="get-involved" className="py-20 healing-gradient">
+    <section
+  id="get-involved"
+  className="py-20 healing-gradient scroll-mt-20"
+>
+
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Join Our <span className="text-secondary-foreground">Empathy Family</span>
+            Sertai <span className="text-secondary-foreground">Keluarga Empati</span>
           </h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            Whether you're seeking support or ready to share your strengths, 
-            there are two meaningful pathways to become part of our healing community.
+             Sama ada anda mencari sokongan atau ingin berkongsi kekuatan, 
+          ada dua cara bermakna untuk menjadi sebahagian daripada komuniti penyembuhan kami.
+
+
+            
           </p>
         </div>
 
         {/* Dual Pathways */}
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           {/* Community Member Path */}
-          <div className="bg-background/10 backdrop-blur-sm rounded-3xl p-8 border border-background/20 shadow-healing">
+          <div className="bg-background backdrop-blur-sm rounded-3xl p-8 border border-background/20 shadow-healing">
             <div className="text-center mb-8">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-3">
-                Become a Community Member
+                 Ahli
               </h3>
               <p className="text-foreground/80 leading-relaxed">
-                Join our empathy family as someone seeking support, healing, and connection. 
-                Every member is valued and has the potential to become a peer supporter.
+              Sertai keluarga empati kami sebagai seseorang yang mencari sokongan, penyembuhan dan hubungan.  
+              Setiap ahli dihargai dan berpeluang untuk menjadi penyokong rakan sebaya.
+
               </p>
             </div>
 
             {/* Member Benefits */}
             <div className="space-y-3 mb-8">
-              <h4 className="font-semibold text-foreground mb-4">What You'll Receive:</h4>
+              <h4 className="font-semibold text-foreground mb-4">Apa yang anda akan terima:</h4>
               {memberBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                 <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-foreground/90 leading-relaxed">
                     {benefit}
                   </span>
@@ -99,33 +108,34 @@ const GetInvolvedSection = () => {
                 size="lg" 
                 className="w-full bg-background text-foreground hover:bg-background/90"
               >
-                Apply for Membership
+                Daftar Sebagai Ahli
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <p className="text-sm text-foreground/70 text-center">
-                No cost • Confidential application • Quick response
+                 Percuma • Sulit • Respon pantas
               </p>
             </div>
           </div>
 
           {/* Volunteer Path */}
-          <div className="bg-background/10 backdrop-blur-sm rounded-3xl p-8 border border-background/20 shadow-healing">
+          <div className="bg-background backdrop-blur-sm rounded-3xl p-8 border border-background/20 shadow-healing">
             <div className="text-center mb-8">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-3">
-                Become a Volunteer
+                Sukarelawan
               </h3>
               <p className="text-foreground/80 leading-relaxed">
-                Share your skills and compassion while growing personally and professionally. 
-                Our volunteers often find as much healing as they provide.
+                Kongsikan kemahiran dan kasih sayang anda sambil berkembang secara peribadi dan profesional.  
+              Ramai sukarelawan kami merasai penyembuhan yang sama seperti yang mereka berikan.
+
               </p>
             </div>
 
             {/* Volunteer Benefits */}
             <div className="space-y-3 mb-8">
-              <h4 className="font-semibold text-foreground mb-4">What You'll Gain:</h4>
+              <h4 className="font-semibold text-foreground mb-4">Apa yang anda akan dapat:</h4>
               {volunteerBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -143,18 +153,18 @@ const GetInvolvedSection = () => {
                 size="lg" 
                 className="w-full bg-background text-foreground hover:bg-background/90"
               >
-                Start Volunteering
+                Daftar Sebagai Sukarelawan
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <p className="text-sm text-foreground/70 text-center">
-                Flexible commitment • Full training provided • Ongoing support
+               Masa fleksibel • Latihan penuh disediakan • Sokongan berterusan
               </p>
             </div>
           </div>
         </div>
 
         {/* Volunteer Roles */}
-        <div className="max-w-4xl mx-auto mb-16">
+        {/* <div className="max-w-4xl mx-auto mb-16">
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
             Volunteer <span className="text-secondary-foreground">Opportunities</span>
           </h3>
@@ -184,10 +194,10 @@ const GetInvolvedSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom CTA */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <div className="bg-background/20 backdrop-blur-sm rounded-2xl p-8 border border-background/30">
             <h3 className="text-2xl font-bold mb-4 text-foreground">
               Ready to Join Our Mission?
@@ -213,7 +223,7 @@ const GetInvolvedSection = () => {
               </Button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

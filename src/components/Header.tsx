@@ -7,14 +7,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Programs", href: "#programs" },
-    { name: "Events", href: "#events" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Impact", href: "#impact" },
-    { name: "Stories", href: "#stories" },
-    { name: "Press", href: "#press" },
+    { name: "Utama", href: "#home" },
+    { name: "Tentang Kami", href: "#about" },
+    { name: "Galeri", href: "#gallery" },
+    { name: "Media", href: "#press" },
   ];
 
   return (
@@ -47,10 +43,20 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button variant="butterfly" size="sm">
+            <Button
+              variant="butterfly"
+              size="sm"
+              onClick={() => {
+                document.getElementById("get-involved")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
               Sertai Kami
             </Button>
           </div>
+
+
 
           {/* Mobile Menu Button */}
           <button
@@ -78,9 +84,17 @@ const Header = () => {
               {/* <Button variant="outline" size="sm">
                 Member Login
               </Button> */}
-              <Button variant="butterfly" size="sm">
-                Sertai Kami
-              </Button>
+               <Button
+              variant="butterfly"
+              size="sm"
+              onClick={() => {
+                document.getElementById("get-involved")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
+              Sertai Kami
+            </Button>
             </div>
           </div>
         )}

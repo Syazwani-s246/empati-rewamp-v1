@@ -64,20 +64,26 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
             <Button
-              variant="butterfly"
-              size="lg"
-              className="text-lg px-8 py-6 h-auto"
-            >
-              Sertai Kami
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
+  variant="butterfly"
+  size="lg"
+  className="text-lg px-8 py-6 h-auto"
+  onClick={() => {
+    document.getElementById("get-involved")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+>
+  Sertai Kami
+  <ArrowRight className="ml-2 h-5 w-5" />
+</Button>
+
+            {/* <Button
               variant="warm"
               size="lg"
               className="text-lg px-8 py-6 h-auto"
             >
               Ketahui Lebih Lanjut
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mission statement */}
