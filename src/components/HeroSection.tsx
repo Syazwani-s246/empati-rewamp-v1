@@ -27,7 +27,7 @@ const HeroSection = () => {
             />
           </div>
 
-          
+
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 animate-fade-in">
@@ -35,9 +35,14 @@ const HeroSection = () => {
             <span className="text-foreground"> Bersama </span>
           </h1>
 
+          {/* Clarification: what Empati is */}
+          <p className="text-base md:text-lg text-center text-foreground/60 italic mb-4 animate-fade-in">
+            Sebuah inisiatif oleh <strong> NGO Empati</strong>, kelab advokasi pulih mental
+          </p>
+
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up">
-           Komuniti yang peduli, tempat semua suara didengari. Kerana empati adalah bahasa yang difahami hati, walau tanpa kata.
+            Komuniti yang peduli, tempat semua suara didengari. Kerana empati adalah bahasa yang difahami hati, walau tanpa kata.
           </p>
 
           {/* Stats */}
