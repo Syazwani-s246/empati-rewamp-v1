@@ -23,11 +23,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src={empatiLogo} 
-              alt="NGO Empati" 
-              className="h-8 w-8 animate-gentle-bounce"
+            <img
+              src={empatiLogo}
+              alt="NGO Empati"
+              className="h-12 w-12 rounded-full object-cover border-2 border-primary shadow-md animate-gentle-bounce"
             />
+
             <span className="text-xl font-bold text-butterfly-gradient">NGO Empati</span>
           </div>
 
@@ -46,11 +47,8 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button variant="outline" size="sm">
-              Member Login
-            </Button>
             <Button variant="butterfly" size="sm">
-              Bergabung
+              Sertai Kami
             </Button>
           </div>
 
@@ -77,11 +75,11 @@ const Header = () => {
               </a>
             ))}
             <div className="flex flex-col space-y-2 pt-4">
-              <Button variant="outline" size="sm">
+              {/* <Button variant="outline" size="sm">
                 Member Login
-              </Button>
+              </Button> */}
               <Button variant="butterfly" size="sm">
-                Bergabung
+                Sertai Kami
               </Button>
             </div>
           </div>

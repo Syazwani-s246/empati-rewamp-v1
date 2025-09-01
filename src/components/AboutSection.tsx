@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import therapySession from "@/assets/therapy-session.jpg";
 import Timeline from "./Timeline";
@@ -7,12 +8,68 @@ import MissionStatement from "./MissionStatement";
 
 const AboutSection = () => {
   const [showTimeline, setShowTimeline] = useState(false);
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const aboutHeaderRef = useRef<HTMLDivElement>(null);
+  const [isTimelineInView, setIsTimelineInView] = useState(false);
+
+  // Intersection Observer for timeline visibility
+  useEffect(() => {
+    if (!showTimeline || !timelineRef.current) {
+      setIsTimelineInView(false);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsTimelineInView(entry.isIntersecting);
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1, // Show button when 10% of timeline is visible
+        rootMargin: "-100px 0px -100px 0px" // Add some margin for better UX
+      }
+    );
+
+    observer.observe(timelineRef.current);
+
+    return () => {
+      if (timelineRef.current) {
+        observer.unobserve(timelineRef.current);
+      }
+    };
+  }, [showTimeline]);
+
+  // Handle timeline close
+  const handleCloseTimeline = () => {
+    setShowTimeline(false);
+    // Smooth scroll back to about header
+    if (aboutHeaderRef.current) {
+      aboutHeaderRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
+
+  // Smooth scroll to timeline when opened
+  useEffect(() => {
+    if (showTimeline && timelineRef.current) {
+      setTimeout(() => {
+        timelineRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 100);
+    }
+  }, [showTimeline]);
 
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div ref={aboutHeaderRef} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Mengenai <span className="text-gradient">Empati</span>
           </h2>
@@ -70,7 +127,22 @@ const AboutSection = () => {
         </div>
 
         {/* Timeline (toggle) */}
-        {showTimeline && <Timeline />}
+        {showTimeline && (
+          <div ref={timelineRef} className="mb-20">
+            <Timeline />
+          </div>
+        )}
+
+        {/* Floating Close Button */}
+        {showTimeline && isTimelineInView && (
+          <button
+            onClick={handleCloseTimeline}
+            className="fixed top-1/2 right-0 z-50 -translate-y-1/2 bg-gray-900/90 backdrop-blur-sm text-white px-4 py-3 rounded-l-lg shadow-lg hover:bg-gray-900 transition-all duration-200 flex items-center gap-2"
+          >
+            <X className="h-4 w-4" />
+            <span className="text-sm font-medium">Tutup</span>
+          </button>
+        )}
 
         {/* Values Grid */}
         <ValuesGrid />

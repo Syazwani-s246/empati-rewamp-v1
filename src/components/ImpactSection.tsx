@@ -41,37 +41,43 @@ const ImpactSection = () => {
   ];
 
   const achievements = [
-    {
-      year: "2019",
-      title: "Founded NGO Empati",
-      description: "Started with a vision to create unified mental health support where everyone contributes to healing."
-    },
-    {
-      year: "2020",
-      title: "Crisis Response Network",
-      description: "Launched 24/7 support system combining professional counselors with trained community volunteers."
-    },
-    {
-      year: "2021",
-      title: "Community Recognition",
-      description: "Received Mental Health Innovation Award for our collaborative approach to community care."
-    },
-    {
-      year: "2022",
-      title: "Program Expansion",
-      description: "Expanded to serve 12 communities with our unified model of peer and professional support."
-    },
-    {
-      year: "2023",
-      title: "Volunteer Empowerment",
-      description: "Launched comprehensive volunteer training program, creating pathways for community leadership."
-    },
-    {
-      year: "2024",
-      title: "Sustainable Impact",
-      description: "Achieved self-sustaining community model where participants become peer supporters and leaders."
-    }
-  ];
+  {
+    year: "2019",
+    title: "Inspirasi Dari Wad Psikiatri",
+    description:
+      "Diasaskan oleh Syahida Zulkarnain selepas pengalaman melihat pesakit psikiatri di PPUM yang mampu berinteraksi tanpa stigma, berbeza dengan masyarakat luar.",
+  },
+  {
+    year: "2020",
+    title: "Kumpulan Sokongan Pertama",
+    description:
+      "Empati mula mengumpulkan anak muda melalui Siri Lepak & Luah — sebuah kumpulan sokongan santai yang membolehkan peserta berkongsi tanpa prejudis.",
+  },
+  {
+    year: "2021",
+    title: "Sokongan & Pengiktirafan",
+    description:
+      "Menerima sokongan rapat daripada Jabatan Perdana Menteri dan pelbagai pihak berkepentingan, mengukuhkan kedudukan Empati sebagai suara anak muda.",
+  },
+  {
+    year: "2022",
+    title: "60 Ahli Komuniti",
+    description:
+      "Komuniti berkembang kepada lebih 60 anak muda yang aktif dalam sistem sokongan Empati.",
+  },
+  {
+    year: "2023",
+    title: "Program Pemerkasaan",
+    description:
+      "Melancarkan aktiviti seperti Terapi Seni, Yoga dan Bengkel Pemerkasaan Diri dengan akses lebih murah atau percuma untuk ahli.",
+  },
+  {
+    year: "2024",
+    title: "NGO Empati Didaftarkan",
+    description:
+      "Empati secara rasmi beroperasi sebagai NGO, berlandaskan 11 teras terapi kumpulan sokongan oleh Dr. Irvin Yalom, dengan tema ‘Sama-Sama Sembuh’.",
+  },
+];
 
   return (
     <section id="impact" className="py-20 community-gradient">

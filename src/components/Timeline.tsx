@@ -1,9 +1,9 @@
 import { achievements } from "../data/aboutData";
 
-const Timeline = () => {
+const Timeline: React.FC = () => {
   return (
     <section className="py-20 bg-background">
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-4xl mx-auto">
         <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
           Perjalanan <span className="text-secondary-foreground">Empati</span>
         </h3>

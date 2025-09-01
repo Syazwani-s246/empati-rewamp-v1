@@ -1,6 +1,6 @@
 import { values } from "../data/aboutData";
 
-const ValuesGrid = () => {
+const ValuesGrid: React.FC = () => {
   return (
     <div className="mt-20">
       <h3 className="text-3xl font-bold text-foreground mb-10">

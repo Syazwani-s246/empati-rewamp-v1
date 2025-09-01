@@ -1,4 +1,4 @@
-const MissionStatement = () => {
+const MissionStatement: React.FC = () => {
   return (
     <div className="mt-20 text-center">
       <div className="max-w-4xl mx-auto p-8 bg-secondary/10 rounded-3xl border border-secondary/20 shadow-warm">
