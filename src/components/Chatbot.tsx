@@ -11,24 +11,26 @@ const Chatbot = () => {
   const [input, setInput] = useState("");
 
   const handleSend = () => {
-    if (!input.trim()) return;
+  if (!input.trim()) return;
 
-    // Add user message
-    setMessages([...messages, { from: "user", text: input }]);
+  // Add user message
+  setMessages([...messages, { from: "user", text: input }]);
 
-    // Cari jawapan berdasarkan keywords
-    let reply = "Maaf, saya tak faham 😅. Cuba tanya soalan lain.";
-    const lowerInput = input.toLowerCase();
-    for (const item of chatbotResponses) {
-      if (item.keywords.some((kw) => lowerInput.includes(kw))) {
-        reply = item.reply;
-        break;
-      }
+  // Cari jawapan berdasarkan keywords
+  let reply: string = "Maaf, saya tak faham 😅. Cuba tanya soalan lain.";
+  const lowerInput = input.toLowerCase();
+  for (const item of chatbotResponses) {
+    if (item.keywords.some((kw) => lowerInput.includes(kw))) {
+      // Check kalau reply function → panggil dia
+      reply = typeof item.reply === "function" ? item.reply() : item.reply;
+      break;
     }
+  }
 
-    setMessages((prev) => [...prev, { from: "bot", text: reply }]);
-    setInput("");
-  };
+  setMessages((prev) => [...prev, { from: "bot", text: reply }]);
+  setInput("");
+};
+
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
